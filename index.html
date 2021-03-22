@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Atena Pages</title>
+  </head>
+
+  <body>
+
+      <header>
+
+      </header>
+
+      <section>
+
+      </section>
+
+    <script>
+    const header = document.querySelector('header');
+    const section = document.querySelector('section');
+    </script>
+<meta charset="utf-8">
+<script type="text/javascript">
+var requestURL = 'https://api.vk.com/method/pages.getTitles?group_id=82039029&access_token=2264989d21e696d0d8260637a32c31217e77f7fd156aa4ed91c73e4c9bd251c1d27ebf7550be0a9c34d65&v=5.130'
+var request = new XMLHttpRequest();
+request.open('GET', requestURL);
+request.responseType = 'json';
+request.send();
+
+request.onload = function() {
+  var AtenaPages = request.response;
+  populateHeader(AtenaPages);
+  showPages(AtenaPages);
+}
+
+function showPages(jsonObj) {
+  var pages = jsonObj['responce'];
+
+  for (var i = 0; i < pages.length; i++) {
+    var myArticle = document.createElement('article');
+    var myH2 = document.createElement('h2');
+    var myPara1 = document.createElement('p');
+    var myPara2 = document.createElement('p');
+    var myPara3 = document.createElement('p');
+
+    myH2.textContent = pages[i].title;
+    myPara1.textContent = 'Link: ' +  'https://vk.com/page-82039029_' + pages[i].id;
+    myPara2.textContent = 'Creator_name: ' + pages[i].creator_name;
+    }
+
+    myArticle.appendChild(myH2);
+    myArticle.appendChild(myPara1);
+    myArticle.appendChild(myPara2);
+    myArticle.appendChild(myPara3);
+
+    section.appendChild(myArticle);
+  }
+</script>
+  </body>
+</html>
