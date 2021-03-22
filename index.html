@@ -8,31 +8,48 @@
 
   <body>
 
-      <header>
+      <form id="jsonFile" name="jsonFile" enctype="multipart/form-data" method="post">
 
-      </header>
+  <fieldset>
+    <h2>Json File</h2>
+     <input type='file' id='fileinput'>
+     <input type='button' id='btnLoad' value='Load' onclick='loadFile();'>
+  </fieldset>
+</form>
 
-      <section>
 
-      </section>
-
-    <script>
-    const header = document.querySelector('header');
-    const section = document.querySelector('section');
-    </script>
-<meta charset="utf-8">
 <script type="text/javascript">
-var requestURL = 'https://api.vk.com/method/pages.getTitles?group_id=82039029&access_token=2264989d21e696d0d8260637a32c31217e77f7fd156aa4ed91c73e4c9bd251c1d27ebf7550be0a9c34d65&v=5.130'
-var request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
-request.send();
 
-request.onload = function() {
-  var AtenaPages = request.response;
-  populateHeader(AtenaPages);
-  showPages(AtenaPages);
-}
+  function loadFile() {
+    var input, file, fr;
+
+    if (typeof window.FileReader !== 'function') {
+      alert("The file API isn't supported on this browser yet.");
+      return;
+    }
+
+    input = document.getElementById('fileinput');
+    if (!input) {
+      alert("Um, couldn't find the fileinput element.");
+    }
+    else if (!input.files) {
+      alert("This browser doesn't seem to support the 'files' property of file inputs.");
+    }
+    else if (!input.files[0]) {
+      alert("Please select a file before clicking 'Load'");
+    }
+    else {
+      file = input.files[0];
+      fr = new FileReader();
+      fr.onload = receivedText;
+      fr.readAsText(file);
+    }
+
+    function receivedText(e) {
+      let lines = e.target.result;
+      var newArr = JSON.parse(lines); 
+    }
+  }
 
 function showPages(jsonObj) {
   var pages = jsonObj['responce'];
