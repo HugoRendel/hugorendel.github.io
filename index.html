@@ -71,9 +71,9 @@ color:#0080FF;
 tw-link.visited:hover
 {
 color:#0080FF;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Старт" tags="" position="35,20" size="100,100">Привет! (set: $name to (prompt: &quot;Для начала игры введите имя вашего персонажа:&quot;, &quot;Имя&quot;))
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Старт" tags="welcome" position="35,20" size="100,100">{Привет! (set: $name to (prompt: &quot;Для начала игры введите имя вашего персонажа:&quot;, &quot;Имя&quot;))
 Здесь вы можете поирать в разные квесты по миру ролевой игры &quot;Атена&quot;. 
-Для начала игры выберите квест в списке слева. </tw-passagedata><tw-passagedata pid="2" name="Шаг 1" tags="" position="5,145" size="100,100">Вы перешли на следующий этап успешно, поздравляю! 
+Для начала игры выберите квест в списке слева.}</tw-passagedata><tw-passagedata pid="2" name="Шаг 1" tags="" position="5,145" size="100,100">Вы перешли на следующий этап успешно, поздравляю! 
 
 Здесь вы, $name, видите новый текст. В настоящем квесте здесь вы увидите следующую текстовую ситуацию по вашей игре. 
 
@@ -83,7 +83,7 @@ color:#0080FF;
 [[Справка|Справка]]</tw-passagedata><tw-passagedata pid="3" name="Справка" tags="" position="134,188" size="100,100">Вы находитесь на странице справки. 
 
 [[В начало|Тестовый квест]]
-[[Назад|Шаг 1]]</tw-passagedata><tw-passagedata pid="4" name="Шаг 2" tags="" position="5,295" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="5" name="header" tags="header" position="295,15" size="100,100">(replace:?sidebar)[Опции: 
+[[Назад|Шаг 1]]</tw-passagedata><tw-passagedata pid="4" name="Шаг 2" tags="" position="5,295" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="5" name="header" tags="header" position="291,17" size="100,100">(replace:?sidebar)[Опции: 
 (icon-restart:&quot;⟲&quot;,&quot;Restart&quot;)(click:&quot;⟲&quot;)[(restart:)]{(link:&quot;↧ Сохранить&quot;)[
   (if:(save-game:&quot;Slot A&quot;))[
     Game saved!
@@ -109,10 +109,9 @@ color:#0080FF;
 (button:)[[Квест 11-&gt;Квест 11]]
 (button:)[[Квест 12-&gt;Квест 12]]
 ]
-
 ]
-(set: $location to (passage:))
-(Print: &#39;&lt;img class=&quot;locationImage&quot; src=&quot;images/&#39; + $location&#39;s name + &#39;.jpg&quot;&gt;&#39;)&lt;br&gt;</tw-passagedata><tw-passagedata pid="6" name="Квест 2" tags="" position="255,150" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="7" name="Квест 3" tags="" position="272,283" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="8" name="Квест 5" tags="" position="878,26" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="9" name="Квест 6" tags="" position="750,21" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="10" name="Квест 7" tags="" position="439,27" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="11" name="Квест 8" tags="" position="375,150" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="12" name="Квест 9" tags="" position="414,282" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="13" name="Квест 10" tags="" position="514,150" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="14" name="Квест 11" tags="" position="664,150" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="15" name="Квест 12" tags="" position="814,150" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="16" name="Тестовый квест" tags="" position="175,21" size="100,100">Привет, $name! 
+{(set: $location to (passage:))
+(Print: &#39;&lt;img class=&quot;locationImage&quot; src=&quot;images/&#39; + $location&#39;s tags&#39;s 1st + &#39;.jpg&quot;&gt;&#39;)&lt;br&gt;}</tw-passagedata><tw-passagedata pid="6" name="Квест 2" tags="" position="255,150" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="7" name="Квест 3" tags="" position="272,283" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="8" name="Квест 5" tags="" position="878,26" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="9" name="Квест 6" tags="" position="750,21" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="10" name="Квест 7" tags="" position="439,27" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="11" name="Квест 8" tags="" position="375,150" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="12" name="Квест 9" tags="" position="414,282" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="13" name="Квест 10" tags="" position="514,150" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="14" name="Квест 11" tags="" position="664,150" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="15" name="Квест 12" tags="" position="814,150" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="16" name="Тестовый квест" tags="" position="175,21" size="100,100">Привет, $name! 
 
 Приветствую тебя в тестовом квесте. В нем нет сюжета и он не будет влиять на твою игру. Этот квест всего лишь проверка функционала для его настройки и откладки. 
 
