@@ -83,7 +83,7 @@ color:#0080FF;
 [[Справка|Справка]]</tw-passagedata><tw-passagedata pid="3" name="Справка" tags="" position="134,188" size="100,100">Вы находитесь на странице справки. 
 
 [[В начало|Тестовый квест]]
-[[Назад|Шаг 1]]</tw-passagedata><tw-passagedata pid="4" name="Шаг 2" tags="" position="5,295" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="5" name="header" tags="header" position="291,17" size="100,100">(replace:?sidebar)[Опции: 
+[[Назад|Шаг 1]]</tw-passagedata><tw-passagedata pid="4" name="Шаг 2" tags="" position="5,295" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="5" name="header" tags="header" position="291,17" size="100,100">{(replace:?sidebar)[Опции: 
 (icon-restart:&quot;⟲&quot;,&quot;Restart&quot;)(click:&quot;⟲&quot;)[(restart:)]{(link:&quot;↧ Сохранить&quot;)[
   (if:(save-game:&quot;Slot A&quot;))[
     Game saved!
@@ -95,24 +95,24 @@ color:#0080FF;
 }
 (box:&quot;X&quot;, 100)[
 Список всех квестов:
-(button:)[[Тестовый квест-&gt;Тестовый квест]]
-(button:)[[Тестовый квест 2-&gt;Тестовый квест 2]]
-(button:)[[Квест 2-&gt;Квест 2]]
-(button:)[[Квест 3-&gt;Квест 3]]
-(button:)[[Квест 4-&gt;Квест 4]]
-(button:)[[Квест 5-&gt;Квест 5]]
-(button:)[[Квест 6-&gt;Квест 6]]
-(button:)[[Квест 7-&gt;Квест 7]]
-(button:)[[Квест 8-&gt;Квест 8]]
-(button:)[[Квест 9-&gt;Квест 9]]
-(button:)[[Квест 10-&gt;Квест 10]]
-(button:)[[Квест 11-&gt;Квест 11]]
+(button:)[[Тестовый квест-&gt;Тестовый квест]]&lt;br&gt;
+(button:)[[Тестовый квест 2-&gt;Тестовый квест 2]]&lt;br&gt;
+(button:)[[Квест 2-&gt;Квест 2]]&lt;br&gt;
+(button:)[[Квест 3-&gt;Квест 3]]&lt;br&gt;
+(button:)[[Квест 4-&gt;Квест 4]]&lt;br&gt;
+(button:)[[Квест 5-&gt;Квест 5]]&lt;br&gt;
+(button:)[[Квест 6-&gt;Квест 6]]&lt;br&gt;
+(button:)[[Квест 7-&gt;Квест 7]]&lt;br&gt;
+(button:)[[Квест 8-&gt;Квест 8]]&lt;br&gt;
+(button:)[[Квест 9-&gt;Квест 9]]&lt;br&gt;
+(button:)[[Квест 10-&gt;Квест 10]]&lt;br&gt;
+(button:)[[Квест 11-&gt;Квест 11]]&lt;br&gt;
 (button:)[[Квест 12-&gt;Квест 12]]
 ]
-]
+](box:&quot;X&quot;,)[
 (set: $location to (passage:))
 (if: $location&#39;s name contains &quot;image&quot;)[
-(Print: &#39;&lt;img class=&quot;locationImage&quot; src=&quot;images/&#39; + $location&#39;s name + &#39;.jpg&quot;&gt;&#39;)&lt;br&gt;]</tw-passagedata><tw-passagedata pid="6" name="Квест 2" tags="" position="255,150" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="7" name="Квест 3" tags="" position="272,283" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="8" name="Квест 5" tags="" position="878,26" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="9" name="Квест 6" tags="" position="750,21" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="10" name="Квест 7" tags="" position="439,27" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="11" name="Квест 8" tags="" position="375,150" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="12" name="Квест 9" tags="" position="414,282" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="13" name="Квест 10" tags="" position="514,150" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="14" name="Квест 11" tags="" position="664,150" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="15" name="Квест 12" tags="" position="814,150" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="16" name="Тестовый квест" tags="" position="175,21" size="100,100">Привет, $name! 
+(Print: &#39;&lt;img class=&quot;locationImage&quot; src=&quot;images/&#39; + $location&#39;s name + &#39;.jpg&quot;&gt;&#39;)&lt;br&gt;]]}</tw-passagedata><tw-passagedata pid="6" name="Квест 2" tags="" position="255,150" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="7" name="Квест 3" tags="" position="272,283" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="8" name="Квест 5" tags="" position="878,26" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="9" name="Квест 6" tags="" position="750,21" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="10" name="Квест 7" tags="" position="439,27" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="11" name="Квест 8" tags="" position="375,150" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="12" name="Квест 9" tags="" position="414,282" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="13" name="Квест 10" tags="" position="514,150" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="14" name="Квест 11" tags="" position="664,150" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="15" name="Квест 12" tags="" position="814,150" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="16" name="Тестовый квест" tags="" position="175,21" size="100,100">Привет, $name! 
 
 Приветствую тебя в тестовом квесте. В нем нет сюжета и он не будет влиять на твою игру. Этот квест всего лишь проверка функционала для его настройки и откладки. 
 
