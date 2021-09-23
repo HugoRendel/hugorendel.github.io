@@ -75,16 +75,17 @@ color:#0080FF;
 Здесь вы можете поирать в разные квесты по миру ролевой игры &quot;Атена&quot;.
 Для начала игры выберите квест в списке слева.</tw-passagedata><tw-passagedata pid="2" name="" tags="header" position="207,14" size="100,100">{(replace:?sidebar)[
 =&gt;&lt;=
-Опции: 
+(hidden:)[Опции:]
 &lt;==
-(hidden:)[(icon-restart:&quot;⟲&quot;)]{(link:&quot;↧ Сохранить&quot;)[
+(hidden:)[(icon-restart:&quot;⟲&quot;)]
+{(hidden:)[(link:&quot;↧ Сохранить&quot;)[
   (if:(save-game:&quot;Slot A&quot;))[
     Game saved!
   ](else: )[
     Sorry, I couldn&#39;t save your game.
   ]
-]}{
-(link: &quot;↥ Загрузить&quot;)[(load-game:&quot;Slot A&quot;)]
+]]}{
+(hidden:)[(link: &quot;↥ Загрузить&quot;)[(load-game:&quot;Slot A&quot;)]]
 }
 (box:&quot;X&quot;, 100)[
 =&gt;&lt;=
