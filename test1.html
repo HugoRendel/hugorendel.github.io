@@ -81,10 +81,10 @@ color:#0080FF;
 [[Справка|Справка]]</tw-passagedata><tw-passagedata pid="2" name="Справка" tags="" position="829,210" size="100,100">Вы находитесь на странице справки. 
 
 [[В начало|Тестовый квест]]
-[[Назад|Шаг 1]]</tw-passagedata><tw-passagedata pid="3" name="Шаг 2" tags="" position="676,368" size="100,100">На этом шаге мы предлагаем вам опробовать взаимодействие с инвентарем. Вам будет предложено взять и съесть мороженное.
+[[Назад|Шаг 1]]</tw-passagedata><tw-passagedata pid="3" name="Шаг 2" tags="" position="676,368" size="100,100">На этом шаге мы предлагаем вам опробовать взаимодействие с инвентарем. Вам будет предложено взять и съесть мороженое.
 
-{(if: $hasicecream is &quot;false&quot;)[(link-goto: &quot;Взять мороженное&quot;)]
-(if: $hasicecream is &quot;true&quot;)[(link-goto: &quot;Съесть мороженное&quot;)]}</tw-passagedata><tw-passagedata pid="4" name="" tags="header" position="164,20" size="100,100">{(replace:?sidebar)[
+{(if: $hasicecream is &quot;false&quot;)[(link-goto: &quot;Взять мороженое&quot;)]
+(if: $hasicecream is &quot;true&quot;)[(link-goto: &quot;Съесть мороженое&quot;)]}</tw-passagedata><tw-passagedata pid="4" name="" tags="header" position="164,20" size="100,100">{(replace:?sidebar)[
 =&gt;&lt;=
 Опции: 
 &lt;==
@@ -126,17 +126,17 @@ color:#0080FF;
 (go-to:&quot;Тестовый квест&quot;)}</tw-passagedata><tw-passagedata pid="8" name="main" tags="" position="285,21" size="100,100">(goto-url: &quot;index.html&quot;)</tw-passagedata><tw-passagedata pid="9" name="Inventory" tags="startup" position="46,132" size="100,100">{
 (set: $inventory to (a:))
 (set: $hasicecream to &quot;false&quot;)
-}</tw-passagedata><tw-passagedata pid="10" name="Взять мороженное" tags="" position="675,487" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="10" name="Взять мороженое" tags="" position="675,487" size="100,100">{
 (set: $hasicecream to &quot;true&quot;)
-(set: $inventory to $inventory + (a: &quot;Мороженное&quot;))
-} Вы взяли мороженное и открыли упаковку. Приятные детские воспоминания и чувства тут же хлынули в вашу голову. Теперь хочется съесть это лакомство прямо сейчас. 
+(set: $inventory to $inventory + (a: &quot;Мороженое&quot;))
+} Вы взяли мороженое и открыли упаковку. Приятные детские воспоминания и чувства тут же хлынули в вашу голову. Теперь хочется съесть это лакомство прямо сейчас. 
 
-[[Съесть мороженное-&gt;Съесть мороженное]]
-[[Вернуться назад-&gt;Шаг 2]]</tw-passagedata><tw-passagedata pid="11" name="Съесть мороженное" tags="" position="815,485" size="100,100">Мороженное было вкусным. 
+[[Съесть мороженое-&gt;Съесть мороженое]]
+[[Вернуться назад-&gt;Шаг 2]]</tw-passagedata><tw-passagedata pid="11" name="Съесть мороженое" tags="" position="815,485" size="100,100">Мороженое было вкусным. 
 А вы заметили, что происходило в вашем инвентаре на панели слева?
 {
 (set: $hasicecream to &quot;false&quot;)
-(set: $inventory to $inventory - (a: &quot;Мороженное&quot;))
+(set: $inventory to $inventory - (a: &quot;Мороженое&quot;))
 }
 [[Попробовать еще раз-&gt;Шаг 2]]
 [[Закончить квест-&gt;Конец.html]]</tw-passagedata><tw-passagedata pid="12" name="Конец.html" tags="" position="678,628" size="100,100">{
