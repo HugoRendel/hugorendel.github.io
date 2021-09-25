@@ -75,15 +75,20 @@ color:#0080FF;
 =&gt;&lt;=
 Опции: 
 &lt;==
-(icon-restart:&quot;⟲&quot;,&quot;Restart&quot;)(click:&quot;⟲&quot;)[(restart:)]{(link:&quot;↧ Сохранить&quot;)[
-  (if:(save-game:&quot;Slot A&quot;))[
-    Game saved!
+(set: $nosaves to &quot;Нет сохранений&quot;)
+{(icon-restart:&quot;⟲&quot;,&quot;Restart&quot;)(click:&quot;⟲&quot;)[(restart:)]&lt;br&gt;
+(link:&quot;↧ Сохранить&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    Игра сохранена!
   ](else: )[
-    Sorry, I couldn&#39;t save your game.
+    Ошибка: Не удается сохранить игру.
   ]
-]}{
-(link: &quot;↥ Загрузить&quot;)[(load-game:&quot;Slot A&quot;)]
-}
+]}
+{|1&gt;[(link: &quot;↥ Загрузить&quot;)[(if: (saved-games: ) contains &quot;Slot 1&quot;)[
+  (load-game:&quot;Slot 1&quot;)
+  ](else: )[
+  	$nosaves&lt;br&gt;
+	(link: &quot;↥ Перезагрузить&quot;)[(rerun:?1)]]]]}
 (box:&quot;X&quot;, 100)[
 =&gt;&lt;=
 Меню:
