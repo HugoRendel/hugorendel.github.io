@@ -84,18 +84,24 @@ color:#0080FF;
 [[Назад|Шаг 1]]</tw-passagedata><tw-passagedata pid="3" name="Шаг 2" tags="" position="676,368" size="100,100">На этом шаге мы предлагаем вам опробовать взаимодействие с инвентарем. Вам будет предложено взять и съесть мороженое.
 
 {(if: $hasicecream is &quot;false&quot;)[(link-goto: &quot;Взять мороженое&quot;)]
-(if: $hasicecream is &quot;true&quot;)[(link-goto: &quot;Съесть мороженое&quot;)]}</tw-passagedata><tw-passagedata pid="4" name="" tags="header" position="164,20" size="100,100">{(replace:?sidebar)[
+(if: $hasicecream is &quot;true&quot;)[(link-goto: &quot;Съесть мороженое&quot;)]}</tw-passagedata><tw-passagedata pid="4" name="" tags="header" position="164,21" size="100,100">{(replace:?sidebar)[
 =&gt;&lt;=
 Опции: 
 &lt;==
-(icon-restart:&quot;⟲&quot;,&quot;Restart&quot;)(click:&quot;⟲&quot;)[(restart:)](link:&quot;↧ Сохранить&quot;)[
-  (if:(save-game:&quot;Slot A&quot;))[
-    Game saved!
+(set: $nosaves to &quot;Нет сохранений&quot;)
+{(icon-restart:&quot;⟲&quot;,&quot;Restart&quot;)(click:&quot;⟲&quot;)[(restart:)]&lt;br&gt;
+(link:&quot;↧ Сохранить&quot;)[
+  (if:(save-game:&quot;Slot 1&quot;))[
+    Игра сохранена!
   ](else: )[
-    Sorry, I couldn&#39;t save your game.
+    Ошибка: Не удается сохранить игру.
   ]
-]
-(link: &quot;↥ Загрузить&quot;)[(load-game:&quot;Slot A&quot;)]
+]}
+{|1&gt;[(link: &quot;↥ Загрузить&quot;)[(if: (saved-games: ) contains &quot;Slot 1&quot;)[
+  (load-game:&quot;Slot 1&quot;)
+  ](else: )[
+  	$nosaves&lt;br&gt;
+	(link: &quot;↥ Перезагрузить&quot;)[(rerun:?1)]]]]}
 (box:&quot;X&quot;, 5)[
 =&gt;&lt;=
 Меню:
@@ -151,7 +157,7 @@ color:#0080FF;
 Предлагаем вам заполнить эту форму, чтобы отправить результаты в сообщество &quot;Атена: Свободная ролевая игра&quot; &lt;br&gt;
 Ссылка на ваш профиль Вконтакте:
 &lt;input type=&quot;text&quot; id=&quot;username&quot; /&gt;
-&lt;input type=&quot;button&quot; value=&quot;Подтвердить&quot; onClick=&quot;getName();sendMessage();&quot; /&gt;&lt;br&gt;
+&lt;button type=&quot;reset&quot; onClick=&quot;getName();sendMessage();&quot;&gt; Подтвердить &lt;/button&gt;&lt;br&gt;
 &lt;/form&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
 function getName() {
@@ -159,6 +165,9 @@ function getName() {
 	user = user.split(&#39;/&#39;)[3];
 }
 function sendMessage() {
+	if (user == undefined) {
+	alert(&quot;Ошибка: Пользователь не предоставил ссылку на профиль&quot;);}
+	else {
 	var message = &quot;Пользователь @&quot; + user + &quot; успешно прошел Тестовый квест&quot;;
 	var webhook = {
 	&quot;id&quot;: &quot;890707295904890880&quot;,
@@ -175,6 +184,8 @@ function sendMessage() {
     })
     .then(res=&gt; console.log(res))
     .catch(err =&gt; console.error(err));
+	alert(&quot;Успех: Результаты отправлены.&quot;);
+	};
 }
 &lt;/script&gt;
 &lt;/body&gt;
