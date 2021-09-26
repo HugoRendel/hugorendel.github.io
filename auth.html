@@ -107,23 +107,17 @@ color:#0080FF;
 &lt;script type=&quot;text/javascript&quot;&gt;
 VK.init({ apiId: 7846638 });
 VK.Auth.login(function(response) {
-  var el = document.getElementById(&#39;b-user&#39;);
-
-  if (response.session) {
-    /* Пользователь успешно авторизовался */
-
-    if (response.session.mid &amp;&amp; response.session.user) {
-      el.innerHTML = &#39;Привет, &lt;a href=&quot;https://vk.com/id%UID%&quot; target=&quot;_blank&quot;&gt;%USERNAME%&lt;/a&gt;!&#39;
-        .replace(&#39;%USERNAME%&#39;, response.session.user.first_name + &#39; &#39; + response.session.user.last_name)
-        .replace(&#39;%UID%&#39;, response.session.user.id);
-    } else {
-      el.innerHTML = &#39;данные пользователя не пришли что-то&#39;;
-    }
-
-  } else {
-    /* Пользователь нажал кнопку Отмена в окне авторизации */
-    el.innerHTML = &#39;Пользователь не согласился&#39;;
-  }
+var el = document.getElementById(&#39;b-user&#39;);
+if (response.session) {
+/* Пользователь успешно авторизовался */
+if (response.session.mid &amp;&amp; response.session.user) {
+el.innerHTML = &#39;Привет, &lt;a href=&quot;https://vk.com/id%UID%&quot;target=&quot;_blank&quot;&gt;%USERNAME%&lt;/a&gt;!&#39;
+.replace(&#39;%USERNAME%&#39;, response.session.user.first_name + &#39; &#39; + response.session.user.last_name)
+.replace(&#39;%UID%&#39;, response.session.user.id);}
+else
+{el.innerHTML = &#39;данные пользователя не пришли что-то&#39;;}}
+else
+{el.innerHTML = &#39;Пользователь не согласился&#39;;}
 });
 &lt;/script&gt;
 &lt;/body&gt;
