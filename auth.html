@@ -105,33 +105,26 @@ color:#0080FF;
 &lt;/head&gt;
 &lt;body&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
+VK.init({ apiId: 7846638 });
 VK.Auth.login(function(response) {
-    if (response.session) {
-        showAuthData(response.session);
+  var el = document.getElementById(&#39;b-user&#39;);
 
-        if (response.settings) {
-            console.log(response.settings);
-            // Выбранные настройки доступа пользователя если они были запрошены
-        }
+  if (response.session) {
+    /* Пользователь успешно авторизовался */
+
+    if (response.session.mid &amp;&amp; response.session.user) {
+      el.innerHTML = &#39;Привет, &lt;a href=&quot;https://vk.com/id%UID%&quot; target=&quot;_blank&quot;&gt;%USERNAME%&lt;/a&gt;!&#39;
+        .replace(&#39;%USERNAME%&#39;, response.session.user.first_name + &#39; &#39; + response.session.user.last_name)
+        .replace(&#39;%UID%&#39;, response.session.user.id);
     } else {
-        // Пользователь нажал кнопку Отмена в окне авторизации 
+      el.innerHTML = &#39;данные пользователя не пришли что-то&#39;;
     }
-}); 
 
-
-function showAuthData(data) {
-    $(&#39;body&#39;).append(&#39;&lt;p&gt;expire: &#39; + data.expire +&#39;&lt;/p&gt;&#39;);
-    $(&#39;body&#39;).append(&#39;&lt;p&gt;mid: &#39; + data.mid +&#39;&lt;/p&gt;&#39;);
-    $(&#39;body&#39;).append(&#39;&lt;p&gt;fio: &#39; + data.user.first_name + &#39; &#39; + data.user.last_name +&#39;&lt;/p&gt;&#39;);
-    $(&#39;body&#39;).append(&#39;&lt;p&gt;userDomain: &#39; + data.user.domain +&#39;&lt;/p&gt;&#39;);
-    $(&#39;body&#39;).append(&#39;&lt;p&gt;-----------------------------------------------&lt;/p&gt;&#39;);
-}
-&lt;/script&gt;
-&lt;button type=&quot;button&quot; onClick=&quot;VK.Auth.login();&quot;&gt; Авторизоваться &lt;/button&gt; &lt;br&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-  VK.init({
-    apiId: 7846638
-  });
+  } else {
+    /* Пользователь нажал кнопку Отмена в окне авторизации */
+    el.innerHTML = &#39;Пользователь не согласился&#39;;
+  }
+});
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;}</tw-passagedata><tw-passagedata pid="4" name="index" tags="" position="338.5,15.5" size="100,100">(goto-url: &quot;index.html&quot;)</tw-passagedata></tw-storydata>
