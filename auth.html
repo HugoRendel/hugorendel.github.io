@@ -71,7 +71,8 @@ color:#0080FF;
 tw-link.visited:hover
 {
 color:#0080FF;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">src="https://vk.com/js/api/openapi.js?169"type="text/javascript"
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"><script src="https://vk.com/js/api/openapi.js?169"></script>
+<script type="text/javascript">
 VK.init({ apiId: 7846638 });
 VK.Auth.login(function(response) {
 var el = document.getElementById('b-user');
@@ -85,7 +86,8 @@ else
 {el.innerHTML = 'данные пользователя не пришли что-то';}}
 else
 {el.innerHTML = 'Пользователь не согласился';}
-});</script><tw-tag name="startup" color="green"></tw-tag>,<tw-tag name="welcome" color="blue"></tw-tag><tw-passagedata pid="1" name="" tags="header" position="207,14" size="100,100">{(replace:?sidebar)[
+});
+</script></script><tw-tag name="startup" color="green"></tw-tag>,<tw-tag name="welcome" color="blue"></tw-tag><tw-passagedata pid="1" name="" tags="header" position="207,14" size="100,100">{(replace:?sidebar)[
 =&gt;&lt;=
 (hidden:)[Опции:]
 &lt;==
