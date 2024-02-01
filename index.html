@@ -8,6 +8,26 @@
 </style>
 </head>
 <body>
+<script type="text/javascript">
+    (function() {
+        var d = document, w = window;
+        w.MgSensorData = w.MgSensorData || [];
+        w.MgSensorData.push({
+            cid:841384,
+            lng:"us",
+            project: "a.mgid.com"
+        });
+        var l = "a.mgid.com";
+        var n = d.getElementsByTagName("script")[0];
+        var s = d.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        var dt = !Date.now?new Date().valueOf():Date.now();
+        s.src = "https://" + l + "/mgsensor.js?d=" + dt;
+        n.parentNode.insertBefore(s, n);
+    })();
+</script>
+    
 <style>
     #M938846ScriptRootC1580151 {
         min-height: 300px;
@@ -17,10 +37,6 @@
 <div id="M938846ScriptRootC1580151"></div>
 <script src="https://jsc.idealmedia.io/w/w/www-example.s3.amazonaws111.com.1580151.js" async></script>
 <!-- Composite End -->
-
-<DIV align="right" onclick=‘_mgg.push([“MgSensor.invoke”, “Click”])’>
-<P style="color:white;">To white list</P>
-</DIV>
  
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Атена: Квесты - Главная страница.</tw-noscript></noscript></tw-story>
 <tw-storydata name="Атена: Квесты - Главная страница" startnode="1" creator="Twine" creator-version="2.3.13" ifid="5E47CBC5-8D5A-4DC5-80E8-91C3F891E03F" zoom="1" format="Harlowe" format-version="3.2.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
