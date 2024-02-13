@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Munrantan</title>
+        <style type="text/css">
+        body { 
+            background-image: url('img/bg.jpg'); 
+            background-size: 100%; 
+            background-repeat: no-repeat; 
+            background-color: #000000 
+            /*position: absolute;
+            left: 0;
+            top: 0;*/
+            }
+        p { 
+            color: #ffffff; 
+            font-size: 14px; 
+        }
+        about {
+            float: left;
+           /* margin-left: 9%;*/
+            margin-top: 33%;
+            
+         }
+        illustration {
+            float: left;
+           /* margin-left: -2%;*/
+            margin-top: 16%;
+         }
+        center_btn {
+            float: left;
+            margin: 20px;
+           /* margin-left: 3%;*/
+            margin-top: 9%;
+         }
+        animation {
+            float: left;
+           /* margin-left: 3%;*/
+            margin-top: 16%;
+         }
+        contact {
+            float: left;
+           /* margin-left: -2%;*/
+            margin-top: 33%;
+         }
+        .outer {
+                display: flex;
+                justify-content: center; /*Центрирование по горизонтали*/
+                align-items: center;     /*Центрирование по вертикали */
+                }
+        .hide {
+                opacity: 0;
+        }
+
+                
+        </style>
+    <script type='text/javascript'>
+    window.onload=function(){
+    function toggle(id, range)
+    {
+    range = range||[2,5];//2 сек картинка появляется, 5 сек исчезает
+    var image = document.getElementById(id),
+        i = 0, s = ["block","none"];
+    function show()
+    {
+       //image.style.display = s[i];
+       image.style.transition = 'all '+range[i]+'s';
+       image.style.webkitTransition = 'all '+range[i]+'s';
+       image.style.mozTransition = 'all '+range[i]+'s';
+       image.style.oTransition = 'all '+range[i]+'s';
+       image.className = i ? 'hide' : ''
+       setTimeout(show,range[i]*1000);
+       i ^= 1
+    }
+    show()
+    }
+    toggle('center_btn')
+    }
+    </script>
+    </head>
+    <body>
+        <p align="center"> Here is test text! Welcome to this page! Have enjoy!</p>
+        <div class="outer" style="height:50%; width: 100%;">    
+            <div class="inner">
+                <about>
+                    <img class="about" src="img/about.png" alt="About me">
+                </about>
+                <illustration>
+                    <img class="illustration" src="img/illustration.png" alt="Illustration">
+                </illustration>
+                <center_btn>
+                    <img class="center_btn" id="center_btn" src="img/center.png" alt="Munrantan">
+                </center_btn>
+                <animation>
+                    <img class="animation" src="img/animation.png" alt="Animation">
+                </animation>
+                <contact>
+                    <img class="contact" src="img/contact.png" alt="Contact">
+                </contact>
+            </div>
+        </div>
+    <footer>
+    
+    </footer>
+    </body>
+
+</html>
