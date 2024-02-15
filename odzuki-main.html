@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Munrantan</title>
+        <style type="text/css">
+        body { 
+            background-image: url('img/bg.jpg'); 
+            background-size: 100%; 
+            background-repeat: no-repeat; 
+            background-color: #000000 
+            }
+        p { 
+            color: #ffffff; 
+            font-size: 14px; 
+        }
+        about {
+            float: left;
+            margin-top: 33%;
+            
+         }
+        illustration {
+            float: left;
+            margin-top: 16%;
+         }
+        logo {
+            float: left;
+            margin: 20px;
+            margin-top: 9%;
+            background-image: url('img/moon.png');
+            background-size: 100%; 
+            background-repeat: no-repeat;
+         }
+        animation {
+            float: left;
+            margin-top: 16%;
+         }
+        contact {
+            float: left;
+            margin-top: 33%;
+        }
+        rebelle {
+            position: absolute;
+            left: 27%;
+            top: 60%;
+                }
+        .outer_body {
+                display: flex;
+                justify-content: center; /*Центрирование по горизонтали*/
+                align-items: center;     /*Центрирование по вертикали */
+         }
+         .outer_footer {
+                display: flex;
+                float: bottom;
+                /*align-items: center;     /*Центрирование по вертикали */
+                justify-content: center; /*Центрирование по горизонтали*/
+        }       
+        .hide {
+                opacity: 0;
+        }
+
+                
+        </style>
+    <script type='text/javascript'>
+        window.onload=function(){
+        function toggle(id, range)
+        {
+            range = range||[2,5];//2 сек картинка появляется, 5 сек исчезает
+            var image = document.getElementById(id),
+            i = 0, s = ["block","none"];
+            function show()
+            {
+                //image.style.display = s[i];
+                image.style.transition = 'all '+range[i]+'s';
+                image.style.webkitTransition = 'all '+range[i]+'s';
+                image.style.mozTransition = 'all '+range[i]+'s';
+                image.style.oTransition = 'all '+range[i]+'s';
+                image.className = i ? 'hide' : ''
+                setTimeout(show,range[i]*1000);
+                i ^= 1
+            }
+        show()
+        }
+        toggle('logo')
+        }
+    </script>
+    </head>
+    <body>
+        <div class="outer_body" style="height:50%; width: 100%;">    
+            <div class="inner">
+                <about>
+                    <img src="img/about.png" alt="About me">
+                </about>
+                <illustration>
+                    <img src="img/illustration.png" alt="Illustration">
+                </illustration>
+                <logo>
+                    <img id="logo" src="img/logo.png" alt="Munrantan">
+                </logo>
+                <animation>
+                    <img src="img/animation.png" alt="Animation">
+                </animation>
+                <contact>
+                    <img src="img/contact.png" alt="Contact">
+                </contact>
+            </div>
+        </div>
+        <rebelle>
+            <img src="img/girl.png" height="100%" width="100%" alt="Main">
+        </rebelle>
+    <footer>
+    <img style="float:bottom; margin-top: 30%;" src="img/logo_futer.png" alt="logo_futer">
+    <div class="outer_footer">
+        <div style="display: grid;">
+        <div><img src="img/mail.png" alt="E-mail"></div>
+        <div style="justify-content: center;">
+            <img src="img/instagram.png" alt="Instagram">
+            <img src="img/pinterest.png" alt="Pinterest">
+            <img src="img/twiter.png" alt="Twitter"></div>
+        </div>
+    </div>
+    </footer>
+    </body>
+
+</html>
