@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=1610">
         <title>Munrantan</title>
         <style type="text/css">
         body { 
             background-image: url('img/bg.jpg'); 
-            background-size: 100%; 
+            background-size: cover; 
             background-repeat: no-repeat; 
-            background-color: #000000 
-            }
+            background-color: #000000;
+            min-width: 1610px;
+            height: 100%; 
+        }
+        container {
+            width: 1610px;
+            margin: auto;
+        }   
         about {
             float: left;
             margin-top: 32%;
-            margin-left: 4%;
             
          }
         illustration {
@@ -39,22 +45,28 @@
             margin-left: -4%;
         }
         rebelle {
-            position: absolute;
-            left: 27%;
-            top: 60%;
-                }
+            display: flex;
+            margin-top: -20%;
+            margin-left: -4%;
+        }
         .outer_body {
-                display: flex;
-                justify-content: center; /*Центрирование по горизонтали*/
-                align-items: center;     /*Центрирование по вертикали */
+            display: flex;
+            justify-content: center; /*Центрирование по горизонтали*/
+            align-items: center;     /*Центрирование по вертикали */
          }
-         .outer_footer {
-                position: absolute;
-                margin-top: 34%;
-                margin-left: 45.5%;
-        }       
+         .outer_footer:before {
+            content: '';
+            display: inline-block;
+        }
+        .inner_footer {
+            margin-top: -6%;
+        }
+        .outer_footer {
+            padding-top: 45px;
+            text-align: center;
+        }   
         .hide {
-                opacity: 0;
+            opacity: 0;
         }
 
                 
@@ -79,60 +91,65 @@
             }
         show()
         }
-        toggle('logo')
+        toggle('ab',[1.5,3])
+        toggle('ill',[1.5,3])
+        toggle('logo',[1.5,3])
+        toggle('an',[1.5,3])
+        toggle('cn',[1.5,3])
         }
     </script>
     </head>
     <body>
-        <!--<section style="height:1900px; width: 1900px; justify-content: center; align-items: center; "> -->
-                <div class="outer_body" style="height:50%; width: 100%;">    
+        <!--<section style="margin: auto; width: 1610px;">-->
+            <div class="container">
+                <div class="outer_body">    
                     <div class="inner">
                         <about>
-                            <a href="../odzuki-about.html">
-                                <img src="img/about.png" title="About me" alt="About me">
+                            <a href="../Odzuki/odzuki-about.html">
+                                <img id="ab" src="img/about.png" title="About me" alt="About me">
                             </a>
                         </about>
                         <illustration>
-                            <a href="../odzuki-illustration.html">
-                                <img style="padding: 0px 15px 0px;" src="img/illustration.png" title="Illustration" alt="Illustration">
+                            <a href="../Odzuki/odzuki-illustration.html">
+                                <img id="ill" style="padding: 0px 15px 0px;" src="img/illustration.png" title="Illustration" alt="Illustration">
                             </a>
                         </illustration>
                         <logo>
-                            <a href="../odzuki-main.html">
+                            <a href="../Odzuki/odzuki-main.html">
                                 <img id="logo" src="img/logo.png" title="Munrantan" alt="Munrantan">
                             </a>
                         </logo>
                         <animation>
-                            <a href="../odzuki-animation.html">
-                                <img style="padding: 0px 15px 0px;" src="img/animation.png" title="Animation" alt="Animation">
+                            <a href="../Odzuki/odzuki-animation.html">
+                                <img id="an" style="padding: 0px 15px 0px;" src="img/animation.png" title="Animation" alt="Animation">
                             </a>
                         </animation>
                         <contact>
-                            <a href="../odzuki-contact.html">
-                                <img src="img/contact.png" title="Contact" alt="Contact">
+                            <a href="../Odzuki/odzuki-contact.html">
+                                <img id="cn" src="img/contact.png" title="Contact" alt="Contact">
                             </a>
                         </contact>
                     </div>
                 </div>
+                <div class="outer_body">    
+                    <div class="inner">
                 <rebelle>
                     <img src="img/girl.png" height="100%" width="100%" alt="Main">
                 </rebelle>
+                    </div>
+                </div>
             <footer>
-                <div>
-                    <img style="position:absolute; margin-top: 30%; margin-left: 7%; padding: 0px 0px 40px;" src="img/logo_futer.png" alt="logo_futer">
-                </div>
-                <div>
-                    <a href="mailto:valerinightowl@gmail.com">
-                        <img style="position: absolute; margin-top: 32%; margin-left: 42%" src="img/mail.png" title="Mail me" alt="E-mail">
-                    </a>
-                </div>
                 <div class="outer_footer">
+                    <img style="display: flex;" src="img/logo_futer.png" alt="logo_futer">
+                    <div class="inner_footer">
+                    <a href="mailto:valerinightowl@gmail.com"><img src="img/mail.png" title="Mail me" alt="E-mail"></a><br>
                     <a href="https://example.com"><img style="padding: 0px 8px 0px;" src="img/instagram.png" title="Instagram" alt="Instagram"></a>
                     <a href="https://example.com"><img style="padding: 0px 8px 0px;" src="img/pinterest.png" title="Pinterest" alt="Pinterest"></a>
                     <a href="https://example.com"><img style="padding: 0px 8px 0px;" src="img/twiter.png" title="Twitter" alt="Twitter"></a>
+                    </div>
             </div>
             </footer>
+        </div>
         <!--</section>-->
     </body>
-
 </html>
