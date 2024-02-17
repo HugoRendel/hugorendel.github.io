@@ -10,18 +10,16 @@
             background-repeat: no-repeat; 
             background-color: #000000 
             }
-        p { 
-            color: #ffffff; 
-            font-size: 14px; 
-        }
         about {
             float: left;
-            margin-top: 33%;
+            margin-top: 32%;
+            margin-left: 4%;
             
          }
         illustration {
             float: left;
             margin-top: 16%;
+            margin-left: -4%;
          }
         logo {
             float: left;
@@ -37,7 +35,8 @@
          }
         contact {
             float: left;
-            margin-top: 33%;
+            margin-top: 32%;
+            margin-left: -4%;
         }
         rebelle {
             position: absolute;
@@ -50,10 +49,9 @@
                 align-items: center;     /*Центрирование по вертикали */
          }
          .outer_footer {
-                display: flex;
-                float: bottom;
-                /*align-items: center;     /*Центрирование по вертикали */
-                justify-content: center; /*Центрирование по горизонтали*/
+                position: absolute;
+                margin-top: 34%;
+                margin-left: 45.5%;
         }       
         .hide {
                 opacity: 0;
@@ -86,40 +84,43 @@
     </script>
     </head>
     <body>
-        <div class="outer_body" style="height:50%; width: 100%;">    
-            <div class="inner">
-                <about>
-                    <img src="img/about.png" alt="About me">
-                </about>
-                <illustration>
-                    <img src="img/illustration.png" alt="Illustration">
-                </illustration>
-                <logo>
-                    <img id="logo" src="img/logo.png" alt="Munrantan">
-                </logo>
-                <animation>
-                    <img src="img/animation.png" alt="Animation">
-                </animation>
-                <contact>
-                    <img src="img/contact.png" alt="Contact">
-                </contact>
+        <!--<section style="height:1900px; width: 1900px; justify-content: center; align-items: center; "> -->
+                <div class="outer_body" style="height:50%; width: 100%;">    
+                    <div class="inner">
+                        <about>
+                            <img src="img/about.png" alt="About me">
+                        </about>
+                        <illustration>
+                            <img style="padding: 0px 15px 0px;" src="img/illustration.png" alt="Illustration">
+                        </illustration>
+                        <logo>
+                            <img id="logo" src="img/logo.png" alt="Munrantan">
+                        </logo>
+                        <animation>
+                            <img style="padding: 0px 15px 0px;" src="img/animation.png" alt="Animation">
+                        </animation>
+                        <contact>
+                            <img src="img/contact.png" alt="Contact">
+                        </contact>
+                    </div>
+                </div>
+                <rebelle>
+                    <img src="img/girl.png" height="100%" width="100%" alt="Main">
+                </rebelle>
+            <footer>
+                <div>
+                    <img style="position:absolute; margin-top: 30%; margin-left: 7%; padding: 0px 0px 40px;" src="img/logo_futer.png" alt="logo_futer">
+                </div>
+                <div>
+                    <img style="position: absolute; margin-top: 32%; margin-left: 42%" src="img/mail.png" alt="E-mail">
+                </div>
+                <div class="outer_footer">
+                    <img style="padding: 0px 8px 0px;" src="img/instagram.png" alt="Instagram">
+                    <img style="padding: 0px 8px 0px;" src="img/pinterest.png" alt="Pinterest">
+                    <img style="padding: 0px 8px 0px;" src="img/twiter.png" alt="Twitter">
             </div>
-        </div>
-        <rebelle>
-            <img src="img/girl.png" height="100%" width="100%" alt="Main">
-        </rebelle>
-    <footer>
-    <img style="float:bottom; margin-top: 30%;" src="img/logo_futer.png" alt="logo_futer">
-    <div class="outer_footer">
-        <div style="display: grid;">
-        <div><img src="img/mail.png" alt="E-mail"></div>
-        <div style="justify-content: center;">
-            <img src="img/instagram.png" alt="Instagram">
-            <img src="img/pinterest.png" alt="Pinterest">
-            <img src="img/twiter.png" alt="Twitter"></div>
-        </div>
-    </div>
-    </footer>
+            </footer>
+        <!--</section>-->
     </body>
 
 </html>
