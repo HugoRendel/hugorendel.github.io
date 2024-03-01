@@ -1,51 +1,40 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <title>Munrantan About</title>
-        <link rel="shortcut icon" type="image/jpg" href="img/favicon.png"/>
-        <style type="text/css">
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <title>Munrantan About</title>  
+      <link rel="shortcut icon" type="image/jpg" href="img/favicon.png"/>
+      <style type="text/css">     
         body { 
             background-image: url('img/bg.jpg'); 
             background-size: cover; 
             background-repeat: no-repeat; 
             background-color: #000000;
         }
-        home {
-            float: left;
-            margin-top: 10%;
-            
-         }  
-        about {
-            float: left;
-            margin-top: 8.3%;
-            margin-left: -2%;
-            
-         }
-        illustration {
-            float: left;
-            margin-top: 14%;
-            margin-left: -1%;
-         }
-        animation {
-            float: left;
-            margin-top: 12%;
-            margin-left: 1.5%;
-         }
-        contact {
-            float: left;
-            margin-top: 10%;
-            margin-left: 1.5%;
+        .container {
+          padding: 0 120px;
+          margin: 0 auto;
         }
-        girl {
+        .header {
+            padding-top: 8%;
             display: flex;
-            margin-top: 5%;
+            justify-content: space-between;
+            gap: 30px;
         }
-        .outer_body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-         }
+        .home, .about, .animation, .illustration, .contact {
+          display: flex;
+          justify-content: center;
+          flex-shrink: 1;
+          flex-grow: 1;
+        }
+        .header img {
+          display: block;
+          max-width: 100%;
+          height: auto;
+        }
+        .main {
+          padding-top: 6%;
+        }
          .outer_footer:before {
             content: '';
             display: inline-block;
@@ -58,52 +47,63 @@
             text-align: center;
             padding-bottom: 45px;
         }   
-        .hide {
-            opacity: 0;
-        }
+        @media (max-width: 1024px) {
+          .container {
+              padding: 0 80px;
+          }
+      }
+
+      @media (max-width: 768px) {
+          .container {
+              padding: 0 60px;
+          }
+      }
+
+      @media (max-width: 320px) {
+          .container {
+              padding: 0 20px;
+          }
+      }
 
                 
         </style>
     </head>
     <body>
-        <section style="margin: auto; width: 1610px;">
-                <div class="outer_body">    
-                    <div class="inner">
-                        <home>
-                            <a href="../odzuki-main.html">
-                                <img id="ab" src="page2/home.png" title="Home" alt="Home">
+        <div class="container">
+            <header class="header">
+                <div class="home">
+                    <a href="../Odzuki/odzuki-main.html">
+                        <img id="ab" src="page2/home.png" title="Home" alt="Home">
+                    </a>
+                </div>
+                <div class="about" style="margin-inline: -2rem; margin-top: -1rem;">
+                    <a href="../Odzuki/odzuki-about.html">
+                        <img id="ab" src="page2/about.png" title="About me" alt="About me">
+                    </a>
+                </div>
+                        <div class="illustration" style="margin-top: 2em;">
+                            <a href="../Odzuki/odzuki-illustration.html">
+                                <img id="ill" src="page2/illustration.png" title="Illustration" alt="Illustration">
                             </a>
-                        </home>
-                        <about>
-                            <a href="../odzuki-about.html">
-                                <img id="ab" src="page2/about.png" title="About me" alt="About me">
+                        </div>
+                        <div class="animation" style="margin-top: 1em;">
+                            <a href="../Odzuki/odzuki-animation.html">
+                                <img id="an" src="page2/animation.png" title="Animation" alt="Animation">
                             </a>
-                        </about>
-                        <illustration>
-                            <a href="../odzuki-illustration.html">
-                                <img id="ill" style="padding: 0px 15px 0px;" src="page2/illustration.png" title="Illustration" alt="Illustration">
-                            </a>
-                        </illustration>
-                        <animation>
-                            <a href="../odzuki-animation.html">
-                                <img id="an" style="padding: 0px 15px 0px;" src="page2/animation.png" title="Animation" alt="Animation">
-                            </a>
-                        </animation>
-                        <contact>
-                            <a href="../odzuki-contact.html">
+                        </div>
+                        <div class="contact">
+                            <a href="../Odzuki/odzuki-contact.html">
                                 <img id="cn" src="page2/contact.png" title="Contact" alt="Contact">
                             </a>
-                        </contact>
-                    </div>
-                </div>
-                <div class="outer_body">    
-                    <div class="inner">
-                <girl>
+                        </div>
+                </header>
+        <div class="main">
+            <div class="outer_girl">    
+                <div class="inner_girl">
                     <img src="page2/girl2.png" height="100%" width="100%" alt="Main">
-                    </map>
-                </girl>
-                    </div>
                 </div>
+            </div>
+        </div>
             <footer>
                 <div class="outer_footer">
                     <img style="display: flex;" src="img/logo_futer.png" alt="logo_futer">
@@ -113,9 +113,9 @@
                     <a href="https://example.com"><img style="padding: 0px 8px 0px;" src="img/pinterest.png" title="Pinterest" alt="Pinterest"></a>
                     <a href="https://example.com"><img style="padding: 0px 8px 0px;" src="img/twiter.png" title="Twitter" alt="Twitter"></a>
                     </div>
-            </div>
+                </div>
             </footer>
-        </section>
+    </div>
     </body>
 
 </html>
