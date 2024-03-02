@@ -4,67 +4,78 @@
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <title>Munrantan</title>
         <link rel="shortcut icon" type="image/jpg" href="img/favicon.png"/>
-        <style type="text/css">
-        body { 
-            background-image: url('img/bg.jpg'); 
-            background-size: cover; 
-            background-repeat: no-repeat; 
-            background-color: #000000;
-        }   
-        about {
-            float: left;
-            margin-top: 32%;
-            
-         }
-        illustration {
-            float: left;
-            margin-top: 16%;
-            margin-left: -4%;
-         }
-        logo {
-            float: left;
-            margin: 20px;
-            margin-top: 9%;
-            background-image: url('img/moon.png');
-            background-size: 100%; 
-            background-repeat: no-repeat;
-         }
-        animation {
-            float: left;
-            margin-top: 16%;
-         }
-        contact {
-            float: left;
-            margin-top: 32%;
-            margin-left: -4%;
-        }
-        rebelle {
-            display: flex;
-            margin-top: -20%;
-            margin-left: -4%;
-        }
-        .outer_body {
-            display: flex;
-            justify-content: center; /*Центрирование по горизонтали*/
-            align-items: center;     /*Центрирование по вертикали */
-         }
-         .outer_footer:before {
-            content: '';
-            display: inline-block;
-        }
-        .inner_footer {
-            margin-top: -6%;
-        }
-        .outer_footer {
-            padding-top: 45px;
-            text-align: center;
-            padding-bottom: 45px;
-        }   
+        <style type="text/css">     
+            body { 
+                background-image: url('img/bg.jpg'); 
+                background-size: cover; 
+                background-repeat: no-repeat; 
+                background-color: #000000;
+            }
+            .container {
+              padding: 0 120px;
+              margin: 0 auto;
+            }
+            .header {
+                padding-top: 8%;
+                display: flex;
+                justify-content: space-between;
+                gap: 30px;
+            }
+            .home, .about, .animation, .illustration, .contact {
+              display: flex;
+              justify-content: center;
+              flex-shrink: 1;
+              flex-grow: 1;
+            }
+            .logo {
+                float: left;
+                margin-top: 1rem;
+                background-image: url('img/moon.png');
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+            .header img {
+              display: block;
+              max-width: 100%;
+              height: auto;
+            }
+            .main {
+              display: flex;
+              justify-content: center;
+              margin-top: -12rem;
+            }
+             .outer_footer:before {
+                content: '';
+                display: inline-block;
+            }
+            .outer_footer {
+                padding-top: 45px;
+                text-align: center;
+                padding-bottom: 45px;
+            } 
+            .inner_footer {
+                margin-top: -6%;
+            }
+            @media (max-width: 1024px) {
+              .container {
+                  padding: 0 80px;
+              }
+          }
+    
+          @media (max-width: 768px) {
+              .container {
+                  padding: 0 60px;
+              }
+          }
+    
+          @media (max-width: 320px) {
+              .container {
+                  padding: 0 20px;
+              }
+            } 
         .hide {
             opacity: 0;
-        }
-
-                
+        }       
         </style>
     <script type='text/javascript'>
         window.onload=function(){
@@ -91,46 +102,45 @@
     </script>
     </head>
     <body>
-        <section style="margin: auto; width: 1610px;">
-                <div class="outer_body">    
-                    <div class="inner">
-                        <about>
+        <div class="container">
+                <header class="header">    
+                        <div class="about" style="margin-top: 25rem;">
                             <a href="../Odzuki/odzuki-about.html">
                                 <img id="ab" src="img/about.png" title="About me" alt="About me">
                             </a>
-                        </about>
-                        <illustration>
+                        </div>
+                        <div class="illustration"  style="margin-top: 10rem; margin-left: -5rem;">
                             <a href="../Odzuki/odzuki-illustration.html">
-                                <img id="ill" style="padding: 0px 15px 0px;" src="img/illustration.png" title="Illustration" alt="Illustration">
+                                <img id="ill" src="img/illustration.png" title="Illustration" alt="Illustration">
                             </a>
-                        </illustration>
-                        <logo>
+                        </div>
+                        <div class="logo">
                             <a href="../Odzuki/odzuki-main.html">
                                 <img id="logo" src="img/logo.png" title="Munrantan" alt="Munrantan">
                             </a>
-                        </logo>
-                        <animation>
+                        </div>
+                        <div class="animation" style="margin-top: 10rem; margin-right: -5rem;">
                             <a href="../Odzuki/odzuki-animation.html">
-                                <img id="an" style="padding: 0px 15px 0px;" src="img/animation.png" title="Animation" alt="Animation">
+                                <img id="an" src="img/animation.png" title="Animation" alt="Animation">
                             </a>
-                        </animation>
-                        <contact>
+                        </div>
+                        <div class="contact" style="margin-top: 25rem;">
                             <a href="../Odzuki/odzuki-contact.html">
                                 <img id="cn" src="img/contact.png" title="Contact" alt="Contact">
                             </a>
-                        </contact>
-                    </div>
-                </div>
-                <div class="outer_body">    
+                        </div>
+                </header>
+            <div class="main">
+                <div class="outer">    
                     <div class="inner">
-                <rebelle>
                     <img src="img/girl.png" height="100%" width="100%" alt="Main">
-                </rebelle>
                     </div>
                 </div>
+            </div>
+        </div>
             <footer>
                 <div class="outer_footer">
-                    <img style="display: flex;" src="img/logo_futer.png" alt="logo_futer">
+                    <img style="display: flex; margin-inline: 8rem;" src="img/logo_futer.png" alt="logo_futer">
                     <div class="inner_footer">
                     <a href="mailto:valerinightowl@gmail.com"><img style="padding-bottom: 10px;" src="img/mail.png" title="Mail me" alt="E-mail"></a><br>
                     <a href="https://example.com"><img style="padding: 0px 8px 0px;" src="img/instagram.png" title="Instagram" alt="Instagram"></a>
@@ -139,7 +149,6 @@
                     </div>
             </div>
             </footer>
-        </section>
     </body>
 
 </html>
