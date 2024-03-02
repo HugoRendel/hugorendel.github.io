@@ -4,69 +4,7 @@
       <meta http-equiv="content-type" content="text/html; charset=UTF-8">
       <title>Munrantan About</title>  
       <link rel="shortcut icon" type="image/jpg" href="img/favicon.png"/>
-      <style type="text/css">     
-        body { 
-            background-image: url('img/bg.jpg'); 
-            background-size: cover; 
-            background-repeat: no-repeat; 
-            background-color: #000000;
-        }
-        .container {
-          padding: 0 120px;
-          margin: 0 auto;
-        }
-        .header {
-            padding-top: 8%;
-            display: flex;
-            justify-content: space-between;
-            gap: 30px;
-        }
-        .home, .about, .animation, .illustration, .contact {
-          display: flex;
-          justify-content: center;
-          flex-shrink: 1;
-          flex-grow: 1;
-        }
-        .header img {
-          display: block;
-          max-width: 100%;
-          height: auto;
-        }
-        .main {
-          padding-top: 6%;
-        }
-         .outer_footer:before {
-            content: '';
-            display: inline-block;
-        }
-        .inner_footer {
-            margin-top: -6%;
-        }
-        .outer_footer {
-            padding-top: 45px;
-            text-align: center;
-            padding-bottom: 45px;
-        }   
-        @media (max-width: 1024px) {
-          .container {
-              padding: 0 80px;
-          }
-      }
-
-      @media (max-width: 768px) {
-          .container {
-              padding: 0 60px;
-          }
-      }
-
-      @media (max-width: 320px) {
-          .container {
-              padding: 0 20px;
-          }
-      }
-
-                
-        </style>
+      <link rel="stylesheet" type="text/css" href="style/about.css">
     </head>
     <body>
         <div class="container">
@@ -97,24 +35,30 @@
                             </a>
                         </div>
                 </header>
-        <div class="main">
-            <div class="outer_girl">    
-                <div class="inner_girl">
-                    <img src="page2/girl2.png" height="100%" width="100%" alt="Main">
+            <div class="main">
+                    <img src="page2/girl2.png" alt="Main">
+            </div>
+        <footer class="footer">
+            <div class="logo_footer">
+                <img src="img/logo_futer.png" alt="logo_futer">
+            </div>
+            <div class="social">
+                <a href="mailto:valerinightowl@gmail.com">
+                    <img src="img/mail.png" title="Mail me" alt="E-mail">
+                </a><br>
+                <div class="buttons">
+                <a href="https://example.com">
+                    <img src="img/instagram.png" title="Instagram" alt="Instagram">
+                </a>
+                <a href="https://example.com">
+                    <img src="img/pinterest.png" title="Pinterest" alt="Pinterest">
+                </a>
+                <a href="https://example.com">
+                    <img src="img/twiter.png" title="Twitter" alt="Twitter">
+                </a>
                 </div>
             </div>
-        </div>
-            <footer>
-                <div class="outer_footer">
-                    <img style="display: flex;" src="img/logo_futer.png" alt="logo_futer">
-                    <div class="inner_footer">
-                    <a href="mailto:valerinightowl@gmail.com"><img style="padding-bottom: 10px;" src="img/mail.png" title="Mail me" alt="E-mail"></a><br>
-                    <a href="https://example.com"><img style="padding: 0px 8px 0px;" src="img/instagram.png" title="Instagram" alt="Instagram"></a>
-                    <a href="https://example.com"><img style="padding: 0px 8px 0px;" src="img/pinterest.png" title="Pinterest" alt="Pinterest"></a>
-                    <a href="https://example.com"><img style="padding: 0px 8px 0px;" src="img/twiter.png" title="Twitter" alt="Twitter"></a>
-                    </div>
-                </div>
-            </footer>
+        </footer>
     </div>
     </body>
 
