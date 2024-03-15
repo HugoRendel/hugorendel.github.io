@@ -23,7 +23,7 @@
         .then(response => response.text())
         .then(text => {
           const paragraphs = text.split('***');
-          const contentElement = document.getElementById('content');
+          const contentElement = document.getElementById('p-area');
 
           paragraphs.forEach(paragraph => {
             const p = document.createElement('p');
